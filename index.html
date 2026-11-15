@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abraham Calderón-Rodríguez | Operations Research & Analytics</title>
+    <title>Abraham Calderón-Rodríguez | Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --bg-color: #ffffff;
@@ -38,39 +39,65 @@
             height: auto;
             border-radius: 8px;
             object-fit: cover;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             border: 1px solid var(--border-color);
         }
 
         aside h1 {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             margin: 0 0 5px 0;
             font-weight: 700;
         }
 
         aside p.subtitle {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
 
-        .social-links {
+        /* Icon links below picture/title */
+        .sidebar-icons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 25px;
+            font-size: 1.2rem;
+        }
+
+        .sidebar-icons a {
+            color: var(--text-color);
+            transition: color 0.2s;
+        }
+
+        .sidebar-icons a:hover {
+            color: var(--link-color);
+        }
+
+        /* Navigation Links */
+        .nav-links {
             list-style: none;
             padding: 0;
             margin: 0 0 30px 0;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
         }
 
-        .social-links li {
-            margin-bottom: 8px;
+        .nav-links li {
+            margin-bottom: 10px;
         }
 
-        .social-links a {
+        .nav-links a {
             color: var(--link-color);
             text-decoration: none;
+            font-weight: 500;
         }
 
-        .social-links a:hover {
+        .nav-links a.active {
+            font-weight: 700;
+            color: #111;
+        }
+
+        .nav-links a:hover {
             text-decoration: underline;
         }
 
@@ -99,57 +126,6 @@
             font-size: 0.95rem;
         }
 
-        .item {
-            margin-bottom: 25px;
-        }
-
-        .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            font-weight: 600;
-            font-size: 1rem;
-        }
-
-        .item-subheader {
-            color: #555;
-            font-size: 0.95rem;
-            margin-bottom: 5px;
-        }
-
-        .date {
-            color: #666;
-            font-size: 0.85rem;
-            font-weight: normal;
-        }
-
-        ul.details {
-            margin-top: 5px;
-            padding-left: 18px;
-        }
-
-        ul.details li {
-            margin-bottom: 5px;
-            font-size: 0.9rem;
-            color: #444;
-        }
-
-        .tag-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
-
-        .tag {
-            background: var(--light-gray);
-            border: 1px solid var(--border-color);
-            padding: 3px 8px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-family: monospace;
-            color: #333;
-        }
-
         footer {
             margin-top: 60px;
             border-top: 1px solid var(--border-color);
@@ -159,7 +135,6 @@
             text-align: left;
         }
 
-        /* Responsive layout for mobile devices */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column;
@@ -177,101 +152,42 @@
 <body>
 
     <div class="container">
-        <!-- Left Sidebar (Photo, Name, Contact) -->
+        <!-- Left Sidebar -->
         <aside>
-            <!-- Replace 'profile.jpg' with your photo filename once uploaded to your repo -->
             <img src="profile.jpg" alt="Abraham Calderón-Rodríguez" class="profile-img" onerror="this.src='https://via.placeholder.com/260x300?text=Your+Photo'">
             <h1>Abraham Calderón-Rodríguez</h1>
             <p class="subtitle">MSc Operations Research & Analytics<br>LSE</p>
             
-            <ul class="social-links">
-                <li>📧 <a href="mailto:abraham.crod@gmail.com">abraham.crod@gmail.com</a></li>
-                <li>💼 <a href="https://linkedin.com" target="_blank">LinkedIn Profile</a></li>
-                <li>🐙 <a href="https://github.com/abrahamcrod" target="_blank">GitHub Profile</a></li>
-                <li>📄 <a href="#" target="_blank">Download CV (PDF)</a></li>
+            <!-- Social Icons -->
+            <div class="sidebar-icons">
+                <a href="mailto:abraham.crod@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://linkedin.com" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/abrahamcrod" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+
+            <!-- Page Navigation -->
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="cv.html">CV</a></li>
             </ul>
         </aside>
 
-        <!-- Right Content Area -->
+        <!-- Right Content Area (Home) -->
         <main>
             <section id="about">
                 <h2>About Me</h2>
-                <p>I am an Operations Research and Infrastructure Analytics professional with 5 years of international experience spanning transport modeling, infrastructure finance, and quantitative optimization. I am currently pursuing an MSc in Operations Research & Analytics at <strong>The London School of Economics and Political Science (LSE)</strong>.</p>
-                <p>My core expertise lies in mathematical programming (AMPL, CPLEX, HiGHS), statistical computing (R, Python), and spatial analytics (QGIS). Previously, as a Senior Consultant at Steer in London, I led transport economics, traffic forecasting, and multi-lateral e-mobility advisory mandates across Europe, Central Asia, and Latin America.</p>
+                <p>Welcome! I am an Operations Research and Infrastructure Analytics professional with 5 years of international experience spanning transport modeling, infrastructure finance, and quantitative optimization. I am currently pursuing my MSc in Operations Research & Analytics at <strong>The London School of Economics and Political Science (LSE)</strong>.</p>
+                <p>My core technical expertise bridges mathematical programming (AMPL, CPLEX, HiGHS), statistical computing (R, Python), and spatial analytics (QGIS). Previously, as a Senior Consultant at Steer in London, I led transport economics, traffic forecasting, and multi-lateral e-mobility advisory mandates across Europe, Central Asia, and Latin America.</p>
             </section>
 
-            <section id="experience">
-                <h2>Experience</h2>
-                
-                <div class="item">
-                    <div class="item-header">
-                        <span>Senior Consultant / Consultant</span>
-                        <span class="date">Jan 2023 – Nov 2025</span>
-                    </div>
-                    <div class="item-subheader">Steer (Steer Davies & Gleave Ltd) — London, UK</div>
-                    <ul class="details">
-                        <li>Directed Total Cost of Ownership (TCO) frameworks and transport demand forecasting for major infrastructure and e-mobility mandates.</li>
-                        <li>Coordinated advisory projects alongside international financial institutions (World Bank, IFC) across Uzbekistan, Kazakhstan, and North Macedonia.</li>
-                    </ul>
-                </div>
-
-                <div class="item">
-                    <div class="item-header">
-                        <span>Assistant Consultant</span>
-                        <span class="date">Feb 2021 – Dec 2022</span>
-                    </div>
-                    <div class="item-subheader">Steer — Mexico City, Mexico</div>
-                    <ul class="details">
-                        <li>Built discrete choice models and transit network assignments for multimodal transport systems.</li>
-                    </ul>
-                </div>
-
-                <div class="item">
-                    <div class="item-header">
-                        <span>External Consultant</span>
-                        <span class="date">Jul 2020 – Dec 2020</span>
-                    </div>
-                    <div class="item-subheader">IDOM Ingeniería — Mexico City, Mexico</div>
-                    <ul class="details">
-                        <li>Conducted transport assessments and spatial bike-sharing network data modeling.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <section id="education">
-                <h2>Education</h2>
-
-                <div class="item">
-                    <div class="item-header">
-                        <span>MSc in Operations Research & Analytics</span>
-                        <span class="date">Sep 2026 – May 2027</span>
-                    </div>
-                    <div class="item-subheader">The London School of Economics and Political Science (LSE) — London, UK</div>
-                    <p style="font-size: 0.9rem; margin-top: 4px; color: #444;">Focus: Optimization theory, stochastic modeling, combinatorial optimization, and algorithmic machine learning.</p>
-                </div>
-
-                <div class="item">
-                    <div class="item-header">
-                        <span>BSc in Civil Engineering</span>
-                        <span class="date">Aug 2014 – Dec 2018</span>
-                    </div>
-                    <div class="item-subheader">Universidad Nacional Autónoma de México (UNAM) — Mexico City, Mexico</div>
-                    <p style="font-size: 0.9rem; margin-top: 4px; color: #444;">Graduated with an 8.64/10.00 GPA. Focused on structural and transportation systems.</p>
-                </div>
-            </section>
-
-            <section id="skills">
-                <h2>Technical Proficiencies</h2>
-                <div class="tag-container">
-                    <span class="tag">R (tidyverse)</span>
-                    <span class="tag">Python</span>
-                    <span class="tag">AMPL</span>
-                    <span class="tag">CPLEX / HiGHS</span>
-                    <span class="tag">QGIS</span>
-                    <span class="tag">Transport Modeling</span>
-                    <span class="tag">Infrastructure Finance</span>
-                    <span class="tag">Stochastic Optimization</span>
-                </div>
+            <section id="interests">
+                <h2>Focus Areas</h2>
+                <p>My professional and academic interests center on applying advanced analytics to complex real-world systems:</p>
+                <ul>
+                    <li>Deterministic and stochastic mathematical optimization models.</li>
+                    <li>Transport economics, infrastructure finance, and Total Cost of Ownership (TCO) frameworks.</li>
+                    <li>Data-driven decision support for sustainable mobility and public infrastructure development.</li>
+                </ul>
             </section>
 
             <footer>
